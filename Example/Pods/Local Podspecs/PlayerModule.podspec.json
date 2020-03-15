@@ -1,0 +1,22 @@
+{
+  "name": "PlayerModule",
+  "version": "0.1.0",
+  "summary": "A short description of PlayerModule.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/18578216982@163.com/PlayerModule",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "18578216982@163.com": "1049646716@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/18578216982@163.com/PlayerModule.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "PlayerModule/Classes/**/*"
+}

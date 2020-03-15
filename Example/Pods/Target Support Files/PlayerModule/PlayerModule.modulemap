@@ -1,0 +1,6 @@
+framework module PlayerModule {
+  umbrella header "PlayerModule-umbrella.h"
+
+  export *
+  module * { export * }
+}

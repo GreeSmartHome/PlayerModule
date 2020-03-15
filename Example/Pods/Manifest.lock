@@ -1,0 +1,16 @@
+PODS:
+  - PlayerModule (0.1.0)
+
+DEPENDENCIES:
+  - PlayerModule (from `../`)
+
+EXTERNAL SOURCES:
+  PlayerModule:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  PlayerModule: e4f6e3412ce322a3c5cdd09327f0a3ee1bd09b95
+
+PODFILE CHECKSUM: fd2bccee2c82115091548b37a3bd59c19e9d43f2
+
+COCOAPODS: 1.9.0

@@ -7,23 +7,91 @@
 //
 
 #import "GRViewController.h"
+#import "GRRemotePlayer.h"
 
 @interface GRViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *playTimeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *totalTimeLabel;
 
+@property (weak, nonatomic) IBOutlet UIProgressView *loadPV;
+
+@property (nonatomic, weak) NSTimer *timer;
+
+@property (weak, nonatomic) IBOutlet UISlider *playSlider;
+
+@property (weak, nonatomic) IBOutlet UIButton *mutedBtn;
+@property (weak, nonatomic) IBOutlet UISlider *volumeSlider;
 @end
 
 @implementation GRViewController
 
+- (NSTimer *)timer {
+    if (!_timer) {
+        NSTimer *timer = [NSTimer timerWithTimeInterval:1 target:self selector:@selector(update) userInfo:nil repeats:YES];
+        [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
+        _timer = timer;
+    }
+    return _timer;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    [self timer];
+}
+- (void)update {
+    
+//    NSLog(@"--%zd", [XMGRemotePlayer shareInstance].state);
+    // 68
+    // 01:08
+    // 设计数据模型的
+    // 弱业务逻辑存放位置的问题
+    self.playTimeLabel.text =  [GRRemotePlayer shareInstance].currentTimeFormat;
+    self.totalTimeLabel.text = [GRRemotePlayer shareInstance].totalTimeFormat;
+    
+    self.playSlider.value = [GRRemotePlayer shareInstance].progress;
+//    NSLog(@"进度===%f",[GRRemotePlayer shareInstance].progress);
+    
+    self.volumeSlider.value = [GRRemotePlayer shareInstance].volume;
+    
+    self.loadPV.progress = [GRRemotePlayer shareInstance].loadDataProgress;
+    
+    self.mutedBtn.selected = [GRRemotePlayer shareInstance].muted;
+
+}
+- (IBAction)play:(id)sender {
+    
+    NSURL *url = [NSURL URLWithString:@"http://audio.xmcdn.com/group23/M04/63/C5/wKgJNFg2qdLCziiYAGQxcTOSBEw402.m4a"];
+    
+    [[GRRemotePlayer shareInstance] palyWithURL:url isCache:YES];
+    
+}
+- (IBAction)pause:(id)sender {
+   
+    [[GRRemotePlayer shareInstance] pause];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)resume:(id)sender {
+    [[GRRemotePlayer shareInstance] resume];
 }
+- (IBAction)kuaijin:(id)sender {
+   
+    [[GRRemotePlayer shareInstance] seekWithTimeDiffer:15];
+}
+- (IBAction)progress:(UISlider *)sender {
+    [[GRRemotePlayer shareInstance] seekWithProgress:sender.value];
+}
+- (IBAction)rate:(id)sender {
+   
+    [[GRRemotePlayer shareInstance] setRate:2];
+}
+- (IBAction)muted:(UIButton *)sender {
+    sender.selected = !sender.selected;
+    [[GRRemotePlayer shareInstance] setMuted:sender.selected];
+}
+- (IBAction)volume:(UISlider *)sender {
+    [[GRRemotePlayer shareInstance] setVolume:sender.value];
+}
+
 
 @end

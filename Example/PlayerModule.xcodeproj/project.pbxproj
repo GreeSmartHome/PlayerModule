@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F5081CB2419C8A700477672 /* GRRemotePlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5081CA2419C8A700477672 /* GRRemotePlayer.m */; };
+		22516FE0241E594B00450FF9 /* NSURL+GR.m in Sources */ = {isa = PBXBuildFile; fileRef = 22516FDF241E594B00450FF9 /* NSURL+GR.m */; };
+		22516FE3241E597800450FF9 /* GRRemoteAudioFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 22516FE2241E597800450FF9 /* GRRemoteAudioFile.m */; };
+		22516FE6241E59A900450FF9 /* GRRemoteResourceDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22516FE5241E59A900450FF9 /* GRRemoteResourceDelegate.m */; };
+		22516FE9241E59C900450FF9 /* GRAudioDownLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 22516FE8241E59C900450FF9 /* GRAudioDownLoader.m */; };
 		29DCFC5DB927DA434290A971 /* Pods_PlayerModule_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B21D2E827755B3810B0B038 /* Pods_PlayerModule_Tests.framework */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
@@ -37,7 +42,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0B89CDE22A04D94C01D979B4 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		0B89CDE22A04D94C01D979B4 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		1F5081C92419C8A700477672 /* GRRemotePlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GRRemotePlayer.h; sourceTree = "<group>"; };
+		1F5081CA2419C8A700477672 /* GRRemotePlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GRRemotePlayer.m; sourceTree = "<group>"; };
+		22516FDE241E594B00450FF9 /* NSURL+GR.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSURL+GR.h"; sourceTree = "<group>"; };
+		22516FDF241E594B00450FF9 /* NSURL+GR.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSURL+GR.m"; sourceTree = "<group>"; };
+		22516FE1241E597800450FF9 /* GRRemoteAudioFile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GRRemoteAudioFile.h; sourceTree = "<group>"; };
+		22516FE2241E597800450FF9 /* GRRemoteAudioFile.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GRRemoteAudioFile.m; sourceTree = "<group>"; };
+		22516FE4241E59A900450FF9 /* GRRemoteResourceDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GRRemoteResourceDelegate.h; sourceTree = "<group>"; };
+		22516FE5241E59A900450FF9 /* GRRemoteResourceDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GRRemoteResourceDelegate.m; sourceTree = "<group>"; };
+		22516FE7241E59C900450FF9 /* GRAudioDownLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GRAudioDownLoader.h; sourceTree = "<group>"; };
+		22516FE8241E59C900450FF9 /* GRAudioDownLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GRAudioDownLoader.m; sourceTree = "<group>"; };
 		384CC047D25CCD30B090908F /* Pods-PlayerModule_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlayerModule_Example.release.xcconfig"; path = "Target Support Files/Pods-PlayerModule_Example/Pods-PlayerModule_Example.release.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* PlayerModule_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayerModule_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -65,8 +80,8 @@
 		9B21D2E827755B3810B0B038 /* Pods_PlayerModule_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlayerModule_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B622B84565D5947791390478 /* Pods_PlayerModule_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlayerModule_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBC56A65D8B171DE9E43C931 /* Pods-PlayerModule_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlayerModule_Tests.release.xcconfig"; path = "Target Support Files/Pods-PlayerModule_Tests/Pods-PlayerModule_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		F5B1DF2A573C74CF8EB82229 /* PlayerModule.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = PlayerModule.podspec; path = ../PlayerModule.podspec; sourceTree = "<group>"; };
-		FFBF09D5E2D206E9CFC56019 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		F5B1DF2A573C74CF8EB82229 /* PlayerModule.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = PlayerModule.podspec; path = ../PlayerModule.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		FFBF09D5E2D206E9CFC56019 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +110,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F5081C82419C86E00477672 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1F5081C92419C8A700477672 /* GRRemotePlayer.h */,
+				1F5081CA2419C8A700477672 /* GRRemotePlayer.m */,
+				22516FE4241E59A900450FF9 /* GRRemoteResourceDelegate.h */,
+				22516FE5241E59A900450FF9 /* GRRemoteResourceDelegate.m */,
+				22516FE7241E59C900450FF9 /* GRAudioDownLoader.h */,
+				22516FE8241E59C900450FF9 /* GRAudioDownLoader.m */,
+				22516FE1241E597800450FF9 /* GRRemoteAudioFile.h */,
+				22516FE2241E597800450FF9 /* GRRemoteAudioFile.m */,
+				22516FDE241E594B00450FF9 /* NSURL+GR.h */,
+				22516FDF241E594B00450FF9 /* NSURL+GR.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +164,7 @@
 		6003F593195388D20070C39A /* Example for PlayerModule */ = {
 			isa = PBXGroup;
 			children = (
+				1F5081C82419C86E00477672 /* Classes */,
 				6003F59C195388D20070C39A /* GRAppDelegate.h */,
 				6003F59D195388D20070C39A /* GRAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
@@ -193,7 +226,6 @@
 				8F35B88CF88725BA44A4CD2A /* Pods-PlayerModule_Tests.debug.xcconfig */,
 				DBC56A65D8B171DE9E43C931 /* Pods-PlayerModule_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -258,6 +290,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -364,9 +397,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22516FE9241E59C900450FF9 /* GRAudioDownLoader.m in Sources */,
+				22516FE6241E59A900450FF9 /* GRRemoteResourceDelegate.m in Sources */,
+				22516FE0241E594B00450FF9 /* NSURL+GR.m in Sources */,
 				6003F59E195388D20070C39A /* GRAppDelegate.m in Sources */,
+				1F5081CB2419C8A700477672 /* GRRemotePlayer.m in Sources */,
 				6003F5A7195388D20070C39A /* GRViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				22516FE3241E597800450FF9 /* GRRemoteAudioFile.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

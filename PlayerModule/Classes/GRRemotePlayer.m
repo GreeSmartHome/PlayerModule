@@ -26,10 +26,14 @@
  资源加载代理
  */
 @property (nonatomic, strong) GRRemoteResourceDelegate *resourceLoaderDelegate;
+
 @end
 
 @implementation GRRemotePlayer
 
+/**
+ 单例初始化
+*/
 static GRRemotePlayer *_remotePlayer;
 +(instancetype)shareInstance {
     
@@ -264,6 +268,8 @@ static GRRemotePlayer *_remotePlayer;
     return self.currentTime / self.totalTime;
 }
 
+
+
 /**
  资源加载进度
 
@@ -343,7 +349,12 @@ static GRRemotePlayer *_remotePlayer;
 - (void)setState:(RemotePlayerState)state {
     _state = state;
     
+    if (self.playerStateBlock) {
+        self.playerStateBlock(state);
+    }
     
 }
+
+
 
 @end

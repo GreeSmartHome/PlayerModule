@@ -38,6 +38,10 @@
 {
     [super viewDidLoad];
     [self timer];
+    
+    [[GRRemotePlayer shareInstance] setPlayerStateBlock:^(RemotePlayerState state) {
+        NSLog(@"状态%lu",(unsigned long)state);
+    }];
 }
 - (void)update {
     
@@ -59,11 +63,13 @@
     self.mutedBtn.selected = [GRRemotePlayer shareInstance].muted;
 
 }
+
+
 - (IBAction)play:(id)sender {
     
     NSURL *url = [NSURL URLWithString:@"http://audio.xmcdn.com/group23/M04/63/C5/wKgJNFg2qdLCziiYAGQxcTOSBEw402.m4a"];
     
-    [[GRRemotePlayer shareInstance] palyWithURL:url isCache:YES];
+    [[GRRemotePlayer shareInstance] palyWithURL:url isCache:NO];
     
 }
 - (IBAction)pause:(id)sender {

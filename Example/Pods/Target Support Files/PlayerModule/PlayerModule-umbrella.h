@@ -10,6 +10,11 @@
 #endif
 #endif
 
+#import "GRAudioDownLoader.h"
+#import "GRRemoteAudioFile.h"
+#import "GRRemotePlayer.h"
+#import "GRRemoteResourceDelegate.h"
+#import "NSURL+GR.h"
 
 FOUNDATION_EXPORT double PlayerModuleVersionNumber;
 FOUNDATION_EXPORT const unsigned char PlayerModuleVersionString[];

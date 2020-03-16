@@ -27,6 +27,8 @@ typedef NS_ENUM(NSUInteger, RemotePlayerState) {
     RemotePlayerStatePause = 4,
     RemotePlayerStateFailed = 5,
 };
+/**状态*/
+typedef void(^RemotePlayerStateBlock)(RemotePlayerState state);
 
 @interface GRRemotePlayer : NSObject
 
@@ -73,6 +75,9 @@ typedef NS_ENUM(NSUInteger, RemotePlayerState) {
 - (void)setVolume:(float)volume;
 
 #pragma mark - 数据提供 ，主动拉取
+//播放进度
+@property (nonatomic ,copy)RemotePlayerStateBlock playerStateBlock;
+
 /** 播放状态 */
 @property (nonatomic ,assign ,readonly) RemotePlayerState state;
 

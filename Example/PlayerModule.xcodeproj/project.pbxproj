@@ -7,11 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1F5081CB2419C8A700477672 /* GRRemotePlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5081CA2419C8A700477672 /* GRRemotePlayer.m */; };
-		22516FE0241E594B00450FF9 /* NSURL+GR.m in Sources */ = {isa = PBXBuildFile; fileRef = 22516FDF241E594B00450FF9 /* NSURL+GR.m */; };
-		22516FE3241E597800450FF9 /* GRRemoteAudioFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 22516FE2241E597800450FF9 /* GRRemoteAudioFile.m */; };
-		22516FE6241E59A900450FF9 /* GRRemoteResourceDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22516FE5241E59A900450FF9 /* GRRemoteResourceDelegate.m */; };
-		22516FE9241E59C900450FF9 /* GRAudioDownLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 22516FE8241E59C900450FF9 /* GRAudioDownLoader.m */; };
+		1F3BF973241F6B83006833FE /* PlayerModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F3BF96C241F6B83006833FE /* PlayerModule.framework */; };
+		1F3BF983241F6C13006833FE /* GRRemoteResourceDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3BF979241F6C13006833FE /* GRRemoteResourceDelegate.m */; };
+		1F3BF984241F6C13006833FE /* GRRemoteAudioFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3BF97A241F6C13006833FE /* GRRemoteAudioFile.m */; };
+		1F3BF985241F6C13006833FE /* GRAudioDownLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3BF97B241F6C13006833FE /* GRAudioDownLoader.m */; };
+		1F3BF986241F6C13006833FE /* GRRemoteAudioFile.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F3BF97C241F6C13006833FE /* GRRemoteAudioFile.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1F3BF987241F6C13006833FE /* NSURL+GR.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F3BF97D241F6C13006833FE /* NSURL+GR.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1F3BF988241F6C13006833FE /* NSURL+GR.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3BF97E241F6C13006833FE /* NSURL+GR.m */; };
+		1F3BF989241F6C13006833FE /* GRAudioDownLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F3BF97F241F6C13006833FE /* GRAudioDownLoader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1F3BF98A241F6C13006833FE /* GRRemotePlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F3BF980241F6C13006833FE /* GRRemotePlayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1F3BF98B241F6C13006833FE /* GRRemotePlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3BF981241F6C13006833FE /* GRRemotePlayer.m */; };
+		1F3BF98C241F6C13006833FE /* GRRemoteResourceDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F3BF982241F6C13006833FE /* GRRemoteResourceDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		29DCFC5DB927DA434290A971 /* Pods_PlayerModule_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B21D2E827755B3810B0B038 /* Pods_PlayerModule_Tests.framework */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
@@ -32,6 +38,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		1F3BF971241F6B83006833FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6003F582195388D10070C39A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1F3BF96B241F6B83006833FE;
+			remoteInfo = PlayerModule;
+		};
 		6003F5B3195388D20070C39A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6003F582195388D10070C39A /* Project object */;
@@ -43,16 +56,18 @@
 
 /* Begin PBXFileReference section */
 		0B89CDE22A04D94C01D979B4 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		1F5081C92419C8A700477672 /* GRRemotePlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GRRemotePlayer.h; sourceTree = "<group>"; };
-		1F5081CA2419C8A700477672 /* GRRemotePlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GRRemotePlayer.m; sourceTree = "<group>"; };
-		22516FDE241E594B00450FF9 /* NSURL+GR.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSURL+GR.h"; sourceTree = "<group>"; };
-		22516FDF241E594B00450FF9 /* NSURL+GR.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSURL+GR.m"; sourceTree = "<group>"; };
-		22516FE1241E597800450FF9 /* GRRemoteAudioFile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GRRemoteAudioFile.h; sourceTree = "<group>"; };
-		22516FE2241E597800450FF9 /* GRRemoteAudioFile.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GRRemoteAudioFile.m; sourceTree = "<group>"; };
-		22516FE4241E59A900450FF9 /* GRRemoteResourceDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GRRemoteResourceDelegate.h; sourceTree = "<group>"; };
-		22516FE5241E59A900450FF9 /* GRRemoteResourceDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GRRemoteResourceDelegate.m; sourceTree = "<group>"; };
-		22516FE7241E59C900450FF9 /* GRAudioDownLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GRAudioDownLoader.h; sourceTree = "<group>"; };
-		22516FE8241E59C900450FF9 /* GRAudioDownLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GRAudioDownLoader.m; sourceTree = "<group>"; };
+		1F3BF96C241F6B83006833FE /* PlayerModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PlayerModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F3BF96F241F6B83006833FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F3BF979241F6C13006833FE /* GRRemoteResourceDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GRRemoteResourceDelegate.m; path = ../../PlayerModule/Classes/GRRemoteResourceDelegate.m; sourceTree = "<group>"; };
+		1F3BF97A241F6C13006833FE /* GRRemoteAudioFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GRRemoteAudioFile.m; path = ../../PlayerModule/Classes/GRRemoteAudioFile.m; sourceTree = "<group>"; };
+		1F3BF97B241F6C13006833FE /* GRAudioDownLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GRAudioDownLoader.m; path = ../../PlayerModule/Classes/GRAudioDownLoader.m; sourceTree = "<group>"; };
+		1F3BF97C241F6C13006833FE /* GRRemoteAudioFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GRRemoteAudioFile.h; path = ../../PlayerModule/Classes/GRRemoteAudioFile.h; sourceTree = "<group>"; };
+		1F3BF97D241F6C13006833FE /* NSURL+GR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSURL+GR.h"; path = "../../PlayerModule/Classes/NSURL+GR.h"; sourceTree = "<group>"; };
+		1F3BF97E241F6C13006833FE /* NSURL+GR.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSURL+GR.m"; path = "../../PlayerModule/Classes/NSURL+GR.m"; sourceTree = "<group>"; };
+		1F3BF97F241F6C13006833FE /* GRAudioDownLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GRAudioDownLoader.h; path = ../../PlayerModule/Classes/GRAudioDownLoader.h; sourceTree = "<group>"; };
+		1F3BF980241F6C13006833FE /* GRRemotePlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GRRemotePlayer.h; path = ../../PlayerModule/Classes/GRRemotePlayer.h; sourceTree = "<group>"; };
+		1F3BF981241F6C13006833FE /* GRRemotePlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GRRemotePlayer.m; path = ../../PlayerModule/Classes/GRRemotePlayer.m; sourceTree = "<group>"; };
+		1F3BF982241F6C13006833FE /* GRRemoteResourceDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GRRemoteResourceDelegate.h; path = ../../PlayerModule/Classes/GRRemoteResourceDelegate.h; sourceTree = "<group>"; };
 		384CC047D25CCD30B090908F /* Pods-PlayerModule_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlayerModule_Example.release.xcconfig"; path = "Target Support Files/Pods-PlayerModule_Example/Pods-PlayerModule_Example.release.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* PlayerModule_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayerModule_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -85,6 +100,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1F3BF969241F6B83006833FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6003F587195388D20070C39A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -93,6 +115,7 @@
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
 				9C6E8FEA5AFB978D1E77A730 /* Pods_PlayerModule_Example.framework in Frameworks */,
+				1F3BF973241F6B83006833FE /* PlayerModule.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,21 +133,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1F5081C82419C86E00477672 /* Classes */ = {
+		1F3BF96D241F6B83006833FE /* PlayerModule */ = {
 			isa = PBXGroup;
 			children = (
-				1F5081C92419C8A700477672 /* GRRemotePlayer.h */,
-				1F5081CA2419C8A700477672 /* GRRemotePlayer.m */,
-				22516FE4241E59A900450FF9 /* GRRemoteResourceDelegate.h */,
-				22516FE5241E59A900450FF9 /* GRRemoteResourceDelegate.m */,
-				22516FE7241E59C900450FF9 /* GRAudioDownLoader.h */,
-				22516FE8241E59C900450FF9 /* GRAudioDownLoader.m */,
-				22516FE1241E597800450FF9 /* GRRemoteAudioFile.h */,
-				22516FE2241E597800450FF9 /* GRRemoteAudioFile.m */,
-				22516FDE241E594B00450FF9 /* NSURL+GR.h */,
-				22516FDF241E594B00450FF9 /* NSURL+GR.m */,
+				1F3BF97F241F6C13006833FE /* GRAudioDownLoader.h */,
+				1F3BF97B241F6C13006833FE /* GRAudioDownLoader.m */,
+				1F3BF97C241F6C13006833FE /* GRRemoteAudioFile.h */,
+				1F3BF97A241F6C13006833FE /* GRRemoteAudioFile.m */,
+				1F3BF980241F6C13006833FE /* GRRemotePlayer.h */,
+				1F3BF981241F6C13006833FE /* GRRemotePlayer.m */,
+				1F3BF982241F6C13006833FE /* GRRemoteResourceDelegate.h */,
+				1F3BF979241F6C13006833FE /* GRRemoteResourceDelegate.m */,
+				1F3BF97D241F6C13006833FE /* NSURL+GR.h */,
+				1F3BF97E241F6C13006833FE /* NSURL+GR.m */,
+				1F3BF96F241F6B83006833FE /* Info.plist */,
 			);
-			path = Classes;
+			path = PlayerModule;
 			sourceTree = "<group>";
 		};
 		6003F581195388D10070C39A = {
@@ -133,6 +157,7 @@
 				60FF7A9C1954A5C5007DD14C /* Podspec Metadata */,
 				6003F593195388D20070C39A /* Example for PlayerModule */,
 				6003F5B5195388D20070C39A /* Tests */,
+				1F3BF96D241F6B83006833FE /* PlayerModule */,
 				6003F58C195388D20070C39A /* Frameworks */,
 				6003F58B195388D20070C39A /* Products */,
 				EBD2027A50DF9B424F9F22FF /* Pods */,
@@ -144,6 +169,7 @@
 			children = (
 				6003F58A195388D20070C39A /* PlayerModule_Example.app */,
 				6003F5AE195388D20070C39A /* PlayerModule_Tests.xctest */,
+				1F3BF96C241F6B83006833FE /* PlayerModule.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -164,7 +190,6 @@
 		6003F593195388D20070C39A /* Example for PlayerModule */ = {
 			isa = PBXGroup;
 			children = (
-				1F5081C82419C86E00477672 /* Classes */,
 				6003F59C195388D20070C39A /* GRAppDelegate.h */,
 				6003F59D195388D20070C39A /* GRAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
@@ -231,7 +256,40 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		1F3BF967241F6B83006833FE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F3BF98C241F6C13006833FE /* GRRemoteResourceDelegate.h in Headers */,
+				1F3BF987241F6C13006833FE /* NSURL+GR.h in Headers */,
+				1F3BF986241F6C13006833FE /* GRRemoteAudioFile.h in Headers */,
+				1F3BF98A241F6C13006833FE /* GRRemotePlayer.h in Headers */,
+				1F3BF989241F6C13006833FE /* GRAudioDownLoader.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		1F3BF96B241F6B83006833FE /* PlayerModule */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F3BF978241F6B83006833FE /* Build configuration list for PBXNativeTarget "PlayerModule" */;
+			buildPhases = (
+				1F3BF967241F6B83006833FE /* Headers */,
+				1F3BF968241F6B83006833FE /* Sources */,
+				1F3BF969241F6B83006833FE /* Frameworks */,
+				1F3BF96A241F6B83006833FE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PlayerModule;
+			productName = PlayerModule;
+			productReference = 1F3BF96C241F6B83006833FE /* PlayerModule.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		6003F589195388D20070C39A /* PlayerModule_Example */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "PlayerModule_Example" */;
@@ -245,6 +303,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				1F3BF972241F6B83006833FE /* PBXTargetDependency */,
 			);
 			name = PlayerModule_Example;
 			productName = PlayerModule;
@@ -280,6 +339,10 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "18578216982@163.com";
 				TargetAttributes = {
+					1F3BF96B241F6B83006833FE = {
+						CreatedOnToolsVersion = 11.3;
+						ProvisioningStyle = Automatic;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -301,11 +364,19 @@
 			targets = (
 				6003F589195388D20070C39A /* PlayerModule_Example */,
 				6003F5AD195388D20070C39A /* PlayerModule_Tests */,
+				1F3BF96B241F6B83006833FE /* PlayerModule */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1F3BF96A241F6B83006833FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6003F588195388D20070C39A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -393,18 +464,25 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1F3BF968241F6B83006833FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F3BF985241F6C13006833FE /* GRAudioDownLoader.m in Sources */,
+				1F3BF988241F6C13006833FE /* NSURL+GR.m in Sources */,
+				1F3BF98B241F6C13006833FE /* GRRemotePlayer.m in Sources */,
+				1F3BF983241F6C13006833FE /* GRRemoteResourceDelegate.m in Sources */,
+				1F3BF984241F6C13006833FE /* GRRemoteAudioFile.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6003F586195388D20070C39A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22516FE9241E59C900450FF9 /* GRAudioDownLoader.m in Sources */,
-				22516FE6241E59A900450FF9 /* GRRemoteResourceDelegate.m in Sources */,
-				22516FE0241E594B00450FF9 /* NSURL+GR.m in Sources */,
 				6003F59E195388D20070C39A /* GRAppDelegate.m in Sources */,
-				1F5081CB2419C8A700477672 /* GRRemotePlayer.m in Sources */,
 				6003F5A7195388D20070C39A /* GRViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
-				22516FE3241E597800450FF9 /* GRRemoteAudioFile.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +497,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		1F3BF972241F6B83006833FE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1F3BF96B241F6B83006833FE /* PlayerModule */;
+			targetProxy = 1F3BF971241F6B83006833FE /* PBXContainerItemProxy */;
+		};
 		6003F5B4195388D20070C39A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 6003F589195388D20070C39A /* PlayerModule_Example */;
@@ -454,6 +537,101 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		1F3BF976241F6B83006833FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = PlayerModule/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zz.com.PlayerModule;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		1F3BF977241F6B83006833FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = PlayerModule/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zz.com.PlayerModule;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		6003F5BD195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -535,6 +713,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PlayerModule/PlayerModule-Prefix.pch";
 				INFOPLIST_FILE = "PlayerModule/PlayerModule-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -551,6 +730,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PlayerModule/PlayerModule-Prefix.pch";
 				INFOPLIST_FILE = "PlayerModule/PlayerModule-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -608,6 +788,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1F3BF978241F6B83006833FE /* Build configuration list for PBXNativeTarget "PlayerModule" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F3BF976241F6B83006833FE /* Debug */,
+				1F3BF977241F6B83006833FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		6003F585195388D10070C39A /* Build configuration list for PBXProject "PlayerModule" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

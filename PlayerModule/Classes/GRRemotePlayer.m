@@ -294,7 +294,7 @@ static GRRemotePlayer *_remotePlayer;
  */
 - (void)playEnd {
     NSLog(@"播放完成");
-    self.state = RemotePlayerStateStopped;
+    self.state = RemotePlayerStateComplete;
 }
 
 /**

@@ -18,6 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 - RemotePlayerStateStopped: 停止
 - RemotePlayerStatePause:   暂停
 - RemotePlayerStateFailed:  失败(比如没有网络缓存失败, 地址找不到)
+- RemotePlayerStateComplete:  一首播放完成
 */
 typedef NS_ENUM(NSUInteger, RemotePlayerState) {
     RemotePlayerStateUnKnown = 0,
@@ -26,6 +27,7 @@ typedef NS_ENUM(NSUInteger, RemotePlayerState) {
     RemotePlayerStateStopped = 3,
     RemotePlayerStatePause = 4,
     RemotePlayerStateFailed = 5,
+    RemotePlayerStateComplete = 6,
 };
 /**状态*/
 typedef void(^RemotePlayerStateBlock)(RemotePlayerState state);

@@ -12,7 +12,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSURL (GR)
 
-
 /**
  获取streaming协议的url地址
  */

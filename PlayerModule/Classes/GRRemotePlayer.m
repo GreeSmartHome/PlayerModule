@@ -97,6 +97,10 @@ static GRRemotePlayer *_remotePlayer;
     //播放被打断
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playInterupt) name:AVPlayerItemPlaybackStalledNotification object:nil];
     
+    //播放视频时候，忽略设备静音按钮
+    AVAudioSession *session = [AVAudioSession sharedInstance];
+    [session setCategory:AVAudioSessionCategoryPlayback error:nil];
+    
     // 3. 资源的播放
     self.player = [AVPlayer playerWithPlayerItem:item];
     

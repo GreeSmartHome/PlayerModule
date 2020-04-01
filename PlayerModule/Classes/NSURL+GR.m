@@ -8,14 +8,12 @@
 
 #import "NSURL+GR.h"
 
-
-
 @implementation NSURL (GR)
 
 - (NSURL *)streamingURL {
-    // http://xxxx
+    
     NSURLComponents *compents = [NSURLComponents componentsWithString:self.absoluteString];
-    compents.scheme = @"sreaming";
+    compents.scheme = @"streaming";
     return compents.URL;
 }
 

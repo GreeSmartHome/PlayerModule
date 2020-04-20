@@ -39,10 +39,45 @@
     [super viewDidLoad];
     [self timer];
     
+    //告诉系统，接收远程控制事件
+    [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
+    [self becomeFirstResponder];
+    //
+    [[GRRemotePlayer shareInstance] playBackAudioWithImage:@"pushu" propertyTitle:@"甜蜜蜜" propertyArtist:@"哈哈"];
+    
     [[GRRemotePlayer shareInstance] setPlayerStateBlock:^(RemotePlayerState state) {
         NSLog(@"状态%lu",(unsigned long)state);
     }];
 }
+
+//响应远程音乐播放控制消息
+- (void)remoteControlReceivedWithEvent:(UIEvent *)event {
+
+    if (event.type == UIEventTypeRemoteControl) {
+        switch (event.subtype) {
+            case UIEventSubtypeRemoteControlPause:
+                NSLog(@"播放暂停");
+                [[GRRemotePlayer shareInstance] pause];
+                break;
+            case UIEventSubtypeRemoteControlTogglePlayPause:
+                NSLog(@"切换");
+                break;
+            case UIEventSubtypeRemoteControlNextTrack:
+                NSLog(@"播放下一首");
+                break;
+            case UIEventSubtypeRemoteControlPreviousTrack:
+                NSLog(@"上一首");
+                break;
+            case UIEventSubtypeRemoteControlPlay:
+                NSLog(@"开始播放");
+                [[GRRemotePlayer shareInstance] resume];
+                break;
+            default:
+                break;
+        }
+    }
+}
+
 - (void)update {
     
 //    NSLog(@"--%zd", [XMGRemotePlayer shareInstance].state);

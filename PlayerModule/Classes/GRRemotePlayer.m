@@ -63,6 +63,18 @@ static GRRemotePlayer *_remotePlayer;
     return _remotePlayer;
 }
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        //配置可后台播放
+        AVAudioSession  *session  =  [AVAudioSession  sharedInstance];
+        [session setActive:YES error:nil];
+        [session setCategory:AVAudioSessionCategoryPlayback error:nil];
+    }
+    return self;
+}
+
 /**
  根据Url地址播放远程音频资源
 
@@ -375,10 +387,6 @@ static GRRemotePlayer *_remotePlayer;
 /// @param propertyTitle 音频名称
 /// @param propertyArtist 音频作者
 - (void)playBackAudioWithImage:(NSString * _Nonnull)image propertyTitle:(NSString *)propertyTitle propertyArtist:(NSString *)propertyArtist {
-    
-    AVAudioSession  *session  =  [AVAudioSession  sharedInstance];
-    [session setActive:YES error:nil];
-    [session setCategory:AVAudioSessionCategoryPlayback error:nil];
 
     MPMediaItemArtwork *artWork = [[MPMediaItemArtwork alloc] initWithImage:[UIImage imageNamed:image]];
 

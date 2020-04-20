@@ -18,6 +18,7 @@
 		1F3BF98A241F6C13006833FE /* GRRemotePlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F3BF980241F6C13006833FE /* GRRemotePlayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1F3BF98B241F6C13006833FE /* GRRemotePlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3BF981241F6C13006833FE /* GRRemotePlayer.m */; };
 		1F3BF98C241F6C13006833FE /* GRRemoteResourceDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F3BF982241F6C13006833FE /* GRRemoteResourceDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1F5C2B32244D3E6A002CBFB8 /* icon_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F5C2B31244D3E6A002CBFB8 /* icon_image.png */; };
 		29DCFC5DB927DA434290A971 /* Pods_PlayerModule_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B21D2E827755B3810B0B038 /* Pods_PlayerModule_Tests.framework */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
@@ -68,6 +69,7 @@
 		1F3BF980241F6C13006833FE /* GRRemotePlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GRRemotePlayer.h; path = ../../PlayerModule/Classes/GRRemotePlayer.h; sourceTree = "<group>"; };
 		1F3BF981241F6C13006833FE /* GRRemotePlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GRRemotePlayer.m; path = ../../PlayerModule/Classes/GRRemotePlayer.m; sourceTree = "<group>"; };
 		1F3BF982241F6C13006833FE /* GRRemoteResourceDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GRRemoteResourceDelegate.h; path = ../../PlayerModule/Classes/GRRemoteResourceDelegate.h; sourceTree = "<group>"; };
+		1F5C2B31244D3E6A002CBFB8 /* icon_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_image.png; path = ../../PlayerModule/Assets/icon_image.png; sourceTree = "<group>"; };
 		384CC047D25CCD30B090908F /* Pods-PlayerModule_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlayerModule_Example.release.xcconfig"; path = "Target Support Files/Pods-PlayerModule_Example/Pods-PlayerModule_Example.release.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* PlayerModule_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayerModule_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -136,6 +138,7 @@
 		1F3BF96D241F6B83006833FE /* PlayerModule */ = {
 			isa = PBXGroup;
 			children = (
+				1F5C2B31244D3E6A002CBFB8 /* icon_image.png */,
 				1F3BF97F241F6C13006833FE /* GRAudioDownLoader.h */,
 				1F3BF97B241F6C13006833FE /* GRAudioDownLoader.m */,
 				1F3BF97C241F6C13006833FE /* GRRemoteAudioFile.h */,
@@ -298,7 +301,7 @@
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				8FB57C59DD8B5BD97141F50F /* [CP] Embed Pods Frameworks */,
+				03C35AFCEE5ECFD2C3542FE3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -378,6 +381,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F5C2B32244D3E6A002CBFB8 /* icon_image.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,6 +407,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		03C35AFCEE5ECFD2C3542FE3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PlayerModule_Example/Pods-PlayerModule_Example-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/PlayerModule/PlayerModule.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/PlayerModule.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PlayerModule_Example/Pods-PlayerModule_Example-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		85541E778CA37AF1515AD248 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -423,24 +445,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8FB57C59DD8B5BD97141F50F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PlayerModule_Example/Pods-PlayerModule_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/PlayerModule/PlayerModule.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlayerModule.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PlayerModule_Example/Pods-PlayerModule_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F60A0485FCC1D7791CA31B1C /* [CP] Check Pods Manifest.lock */ = {

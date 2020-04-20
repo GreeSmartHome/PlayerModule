@@ -10,6 +10,16 @@
 #import <AVFoundation/AVFoundation.h>
 #import "GRRemoteResourceDelegate.h"
 #import "NSURL+GR.h"
+#import <MediaPlayer/MediaPlayer.h>
+
+//日志打印
+#ifdef DEBUG
+#define GRLog(...) NSLog(__VA_ARGS__)
+#define GRDetailLog(...) printf("%s\n",[[NSString stringWithFormat:__VA_ARGS__]UTF8String]);
+#else
+#define GRLog(...)
+#define GRDetailLog(...)
+#endif
 
 @interface GRRemotePlayer ()
 {
@@ -59,11 +69,11 @@ static GRRemotePlayer *_remotePlayer;
  @param url url地址资源
  @param isCache 是否需要缓存
  */
-- (void)palyWithURL:(NSURL *)url isCache:(BOOL)isCache {
+- (void)playWithURL:(NSURL *)url isCache:(BOOL)isCache {
     
     NSURL *currentURL = [(AVURLAsset *)self.player.currentItem.asset URL];
     if ([currentURL isEqual:url]) {
-        NSLog(@"当前播放任务已经存在");
+        GRLog(@"当前播放任务已经存在");
         [self resume];
         return;
     }
@@ -156,9 +166,9 @@ static GRRemotePlayer *_remotePlayer;
     
     [self.player seekToTime:currentTime completionHandler:^(BOOL finished) {
         if (finished) {
-            NSLog(@"确定加载这个时间点的音频资源");
+            GRLog(@"确定加载这个时间点的音频资源");
         }else {
-            NSLog(@"取消加载这个时间点的音频资源");
+            GRLog(@"取消加载这个时间点的音频资源");
         }
     }];
     
@@ -297,7 +307,7 @@ static GRRemotePlayer *_remotePlayer;
  播放完成
  */
 - (void)playEnd {
-    NSLog(@"播放完成");
+    GRLog(@"播放完成");
     self.state = RemotePlayerStateComplete;
 }
 
@@ -306,7 +316,7 @@ static GRRemotePlayer *_remotePlayer;
  */
 - (void)playInterupt {
     // 来电话, 资源加载跟不上
-    NSLog(@"播放被打断");
+    GRLog(@"播放被打断");
     self.state = RemotePlayerStatePause;
 }
 
@@ -316,17 +326,19 @@ static GRRemotePlayer *_remotePlayer;
     if ([keyPath isEqualToString:@"status"]) {
         AVPlayerItemStatus status = [change[NSKeyValueChangeNewKey] integerValue];
         if (status == AVPlayerItemStatusReadyToPlay) {//开始才会进入
-            NSLog(@"资源准备好了, 这时候播放就没有问题");
-            [self resume];
-            
+            GRLog(@"资源准备好了, 这时候播放就没有问题");
+            if (!_isUserPause) {
+                [self resume];
+            }
+        
         }else {
-            NSLog(@"状态未知");
+            GRLog(@"状态未知");
             self.state = RemotePlayerStateFailed;
         }
     }else if ([keyPath isEqualToString:@"playbackLikelyToKeepUp"]) {//后面加载资源都进这里
        BOOL ptk = [change[NSKeyValueChangeNewKey] boolValue];
         if (ptk) {
-             NSLog(@"当前的资源, 准备的已经足够播放了");
+             GRLog(@"当前的资源, 准备的已经足够播放了");
             // 用户的手动暂停的优先级最高
             if (!_isUserPause) {
                 [self resume];
@@ -335,7 +347,7 @@ static GRRemotePlayer *_remotePlayer;
             }
             
         }else{
-            NSLog(@"资源还不够, 正在加载过程当中");
+            GRLog(@"资源还不够, 正在加载过程当中");
             self.state = RemotePlayerStateLoading;
         }
     }
@@ -358,6 +370,26 @@ static GRRemotePlayer *_remotePlayer;
     }
     
 }
+/// 在后台播放音视频
+/// @param image 音频背景图片
+/// @param propertyTitle 音频名称
+/// @param propertyArtist 音频作者
+- (void)playBackAudioWithImage:(NSString * _Nonnull)image propertyTitle:(NSString *)propertyTitle propertyArtist:(NSString *)propertyArtist {
+    
+    AVAudioSession  *session  =  [AVAudioSession  sharedInstance];
+    [session setActive:YES error:nil];
+    [session setCategory:AVAudioSessionCategoryPlayback error:nil];
+
+    MPMediaItemArtwork *artWork = [[MPMediaItemArtwork alloc] initWithImage:[UIImage imageNamed:image]];
+
+      NSDictionary *dic = @{MPMediaItemPropertyTitle:propertyTitle,
+                 MPMediaItemPropertyArtist:propertyArtist,
+                 MPMediaItemPropertyArtwork:artWork
+                 };
+    [[MPNowPlayingInfoCenter defaultCenter] setNowPlayingInfo:dic];
+    
+}
+
 
 
 

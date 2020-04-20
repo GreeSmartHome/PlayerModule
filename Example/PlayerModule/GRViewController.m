@@ -69,7 +69,7 @@
     
     NSURL *url = [NSURL URLWithString:@"http://audio.xmcdn.com/group23/M04/63/C5/wKgJNFg2qdLCziiYAGQxcTOSBEw402.m4a"];
     
-    [[GRRemotePlayer shareInstance] palyWithURL:url isCache:NO];
+    [[GRRemotePlayer shareInstance] playWithURL:url isCache:NO];
     
 }
 - (IBAction)pause:(id)sender {

@@ -42,7 +42,7 @@ typedef void(^RemotePlayerStateBlock)(RemotePlayerState state);
  @param url url地址
  @param isCache 是否需要缓存
  */
-- (void)palyWithURL:(NSURL *)url isCache:(BOOL)isCache;
+- (void)playWithURL:(NSURL *)url isCache:(BOOL)isCache;
 
 /**暂停播放*/
 - (void)pause;
@@ -75,6 +75,12 @@ typedef void(^RemotePlayerStateBlock)(RemotePlayerState state);
 
 /**调整音量*/
 - (void)setVolume:(float)volume;
+
+/// 在后台播放音视频
+/// @param image 音频背景图片,不能为空
+/// @param propertyTitle 音频名称
+/// @param propertyArtist 音频作者
+- (void)playBackAudioWithImage:(NSString * _Nonnull)image propertyTitle:(NSString *)propertyTitle propertyArtist:(NSString *)propertyArtist;
 
 #pragma mark - 数据提供 ，主动拉取
 //播放进度

@@ -78,10 +78,16 @@ static GRRemotePlayer *_remotePlayer;
 /**
  根据Url地址播放远程音频资源
 
- @param url url地址资源
+ @param urlStr url地址资源
  @param isCache 是否需要缓存
  */
-- (void)playWithURL:(NSURL *)url isCache:(BOOL)isCache {
+- (void)playWithURL:(NSString *)urlStr isCache:(BOOL)isCache {
+    
+    // 设置播放的url
+    NSURL *url = [NSURL fileURLWithPath:urlStr];
+    if ([urlStr hasPrefix:@"http://"] || [urlStr hasPrefix:@"https://"]) {
+        url = [NSURL URLWithString:urlStr];
+    }
     
     NSURL *currentURL = [(AVURLAsset *)self.player.currentItem.asset URL];
     if ([currentURL isEqual:url]) {

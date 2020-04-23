@@ -39,10 +39,10 @@ typedef void(^RemotePlayerStateBlock)(RemotePlayerState state);
 
 /**
  开始播放远程音频
- @param url url地址
+ @param urlStr url地址
  @param isCache 是否需要缓存
  */
-- (void)playWithURL:(NSURL *)url isCache:(BOOL)isCache;
+- (void)playWithURL:(NSString *)urlStr isCache:(BOOL)isCache;
 
 /**暂停播放*/
 - (void)pause;

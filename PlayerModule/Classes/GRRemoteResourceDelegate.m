@@ -95,7 +95,7 @@
 
 - (void)handleAllLoadingRequest {
 //    NSLog(@"在这里不断的处理请求");
-    NSLog(@"-----%@", self.loadingRequests);
+//    NSLog(@"-----%@", self.loadingRequests);
     NSMutableArray *deleteRequests = [NSMutableArray array];
     for (AVAssetResourceLoadingRequest *loadingRequest in self.loadingRequests) {
         // 1. 填充内容信息头
@@ -112,16 +112,16 @@
             data = [NSData dataWithContentsOfFile:[GRRemoteAudioFile cacheFilePath:url] options:NSDataReadingMappedIfSafe error:nil];
         }
         
-        long long requestOffset = loadingRequest.dataRequest.requestedOffset;
-        long long currentOffset = loadingRequest.dataRequest.currentOffset;
+        NSInteger requestOffset = (NSInteger)loadingRequest.dataRequest.requestedOffset;
+        NSInteger currentOffset = (NSInteger)loadingRequest.dataRequest.currentOffset;
         if (requestOffset != currentOffset) {
             requestOffset = currentOffset;
         }
         NSInteger requestLength = loadingRequest.dataRequest.requestedLength;
 
         
-        long long responseOffset = requestOffset - self.downLoader.offset;
-        long long responseLength = MIN(self.downLoader.offset + self.downLoader.loadedSize - requestOffset, requestLength) ;
+        NSUInteger responseOffset = requestOffset - (NSInteger)self.downLoader.offset;
+        NSUInteger responseLength = MIN((NSUInteger)self.downLoader.offset + (NSUInteger)self.downLoader.loadedSize - requestOffset, requestLength) ;
         
         NSData *subData = [data subdataWithRange:NSMakeRange(responseOffset, responseLength)];
         

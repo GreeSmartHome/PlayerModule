@@ -298,7 +298,6 @@
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				03C35AFCEE5ECFD2C3542FE3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -403,24 +402,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		03C35AFCEE5ECFD2C3542FE3 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PlayerModule_Example/Pods-PlayerModule_Example-resources.sh",
-				"${PODS_CONFIGURATION_BUILD_DIR}/PlayerModule/PlayerModule.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/PlayerModule.bundle",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PlayerModule_Example/Pods-PlayerModule_Example-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		85541E778CA37AF1515AD248 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

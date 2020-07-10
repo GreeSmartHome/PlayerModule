@@ -21,11 +21,11 @@ Pod::Spec.new do |s|
 这是一个远程音频，视频播放器组件
                        DESC
 
-  s.homepage         = 'https://gitee.com/luojiya/RemotePlayerModule'
+  s.homepage         = 'https://github.com/GreeSmartHome/PlayerModule'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { '18578216982@163.com' => '1049646716@qq.com' }
-  s.source           = { :git => 'https://gitee.com/luojiya/RemotePlayerModule.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/GreeSmartHome/PlayerModule.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'

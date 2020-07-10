@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'PlayerModule'
-  s.version          = '1.0.2'
+  s.version          = '1.0.0'
   s.summary          = '播放器组件'
 
 # This description is used to generate tags and improve search results.
@@ -30,8 +30,8 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '8.0'
 
-#  s.source_files = 'PlayerModule/Classes/**/*'
-  s.vendored_frameworks = 'PlayerModule/Framework/PlayerModule.framework'
+  s.source_files = 'PlayerModule/Classes/**/*'
+#  s.vendored_frameworks = 'PlayerModule/Framework/PlayerModule.framework'
 #  s.resource_bundles = {
 #     'PlayerModule' => ['PlayerModule/Assets/*.png']
 #   }

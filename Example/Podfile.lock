@@ -1,5 +1,5 @@
 PODS:
-  - PlayerModule (1.0.0)
+  - PlayerModule (1.0.2)
 
 DEPENDENCIES:
   - PlayerModule (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  PlayerModule: 016ac79b117a28042bd5081c61e800b63c4b7d74
+  PlayerModule: b9e878deb3ea084b872e43bf875ac822fbd62b8e
 
 PODFILE CHECKSUM: fd2bccee2c82115091548b37a3bd59c19e9d43f2
 

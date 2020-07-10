@@ -53,6 +53,9 @@ static GRRemotePlayer *_remotePlayer;
     return _remotePlayer;
 }
 
+
+
+
 + (instancetype)allocWithZone:(struct _NSZone *)zone {
     if (!_remotePlayer) {
         static dispatch_once_t onceToken;
